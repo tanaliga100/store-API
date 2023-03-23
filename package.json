@@ -1,0 +1,31 @@
+{
+  "name": "storeapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/app.js",
+    "populate": "node dist/populate.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/app.js\""
+  },
+  "keywords": [],
+  "author": "jordantanaliga100",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "mongoose": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/mongodb": "^4.0.7",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^18.15.5",
+    "concurrently": "^7.6.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22",
+    "typescript": "^5.0.2"
+  }
+}
