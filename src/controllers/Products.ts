@@ -44,7 +44,6 @@ const getAllProducts = async (
     if (search) {
       queryObject.name = { $regex: search, $options: "i" } as unknown as string;
     }
-
     let result = Products.find(queryObject);
 
     // USING SORT METHOD NI MONGOOSE
@@ -56,7 +55,6 @@ const getAllProducts = async (
     } else {
       result = result.sort("createaAt");
     }
-
     // USING SELECT METHOD NI MONGOOSE
     if (fields) {
       if (typeof fields === "string") {
